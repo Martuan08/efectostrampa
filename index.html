@@ -1,113 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Efectos Trampa</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: url('https://gcdn.emol.cl/fotografia/files/2013/05/animales-tristes-2.jpg') no-repeat center center fixed;
-            background-size: cover;
-            text-align: center;
-        }
-        .header {
-            background: url('ruta-de-tu-imagen.jpg') no-repeat center center;
-            background-size: cover;
-            height: 300px;
-            width: 100%;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .presentation {
-            background: linear-gradient(135deg, rgba(30, 60, 114, 0.9), rgba(42, 82, 152, 0.9));
-            color: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .pdf-container {
-            margin-top: 20px;
-            padding: 20px;
-            background: #f0f0f0;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-            border-radius: 10px;
-        }
-        .email-box {
-            margin-top: 20px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-        .email-box:hover {
-            transform: scale(1.02);
-        }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .email-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #28a745, #218838);
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            text-decoration: none;
-            transition: background 0.3s, transform 0.2s;
-        }
-        .email-button:hover {
-            background: linear-gradient(135deg, #218838, #1e7e34);
-            transform: scale(1.05);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efectos Trampa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://gcdn.emol.cl/fotografia/files/2013/05/animales-tristes-2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+    }
+
+    .header {
+      background: url('ruta-de-tu-imagen.jpg') no-repeat center center;
+      background-size: cover;
+      height: 200px;
+      width: 100%;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 95%;
+      margin: auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .presentation {
+      background: linear-gradient(135deg, rgba(30, 60, 114, 0.9), rgba(42, 82, 152, 0.9));
+      color: white;
+      padding: 30px 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .pdf-container {
+      margin: 20px 0;
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .email-box {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .email-box:hover {
+      transform: scale(1.02);
+    }
+
+    .email-button {
+      background: linear-gradient(135deg, #28a745, #218838);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .email-button:hover {
+      background: linear-gradient(135deg, #218838, #1e7e34);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .presentation h1 {
+        font-size: 24px;
+      }
+      .presentation p, .pdf-container h2, .email-box h2 {
+        font-size: 16px;
+      }
+      iframe {
+        height: 250px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header with the presentation image -->
-    <div class="header"></div>
+  <div class="header"></div>
 
-    <div class="container">
-        <div class="presentation">
-            <h1>Efectos Trampa</h1>
-            <p>Aquí podrás descubrir que són y poner tu granito de arena para ayudar a combatirlos.</p>
-        </div>
-
-        <!-- Caja con el PDF incrustado en un iframe -->
-        <div class="pdf-container">
-            <h2>¿Por qué lo hemos elegido?</h2>
-            <iframe src="EfectosTrampa.pdf" allowfullscreen></iframe>
-        </div>
-        
-        <div class="email-box">
-            <h2>¿Conoces algún efecto trampa?<br>Mándanos la ubicación por aquí</h2>
-            <a class="email-button" href="mailto:fueraefectostrampa@gmail.com" target="_blank">Enviar correo</a>
-        </div>
-        <div class="pdf-container">
-            <h2>Estos son algunos que hemos recopilado</h2>
-            <iframe src="Foto.png" allowfullscreen></iframe>
-        </div>
+  <div class="container">
+    <div class="presentation">
+      <h1>Efectos Trampa</h1>
+      <p>Aquí podrás descubrir qué son y poner tu granito de arena para ayudar a combatirlos.</p>
     </div>
+
+    <div class="pdf-container">
+      <h2>¿Por qué lo hemos elegido?</h2>
+      <iframe src="EfectosTrampa.pdf" allowfullscreen></iframe>
+    </div>
+
+    <div class="email-box">
+      <h2>¿Conoces algún efecto trampa?<br>Mándanos la ubicación por aquí</h2>
+      <a class="email-button" href="mailto:fueraefectostrampa@gmail.com" target="_blank">Enviar correo</a>
+    </div>
+
+    <div class="pdf-container">
+      <h2>Estos son algunos que hemos recopilado</h2>
+      <iframe src="Foto.png" allowfullscreen></iframe>
+    </div>
+  </div>
 </body>
 </html>
